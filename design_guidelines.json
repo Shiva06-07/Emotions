@@ -1,0 +1,119 @@
+﻿{
+  "project_name": "Memory Replay Engine",
+  "theme_archetype": {
+    "theme": "dark",
+    "archetype_number": 5,
+    "archetype_name": "Jewel & Luxury (Cinematic & Introspective)",
+    "rationale": "Memories, introspection, and deep personal data mapping require a cinematic, thoughtful, and secure environment. A premium dark mode feels like an immersive 'theater' for replaying one's life, avoiding the cold clinical feel of typical data dashboards."
+  },
+  "typography": {
+    "strategy": "Classic Serif Head + Sterile Mono Body",
+    "fonts": {
+      "headings": {
+        "family": "Cormorant Garamond, serif",
+        "weights": ["300", "400", "600"],
+        "usage": "Use for primary titles (H1, H2) and story mode narratives. Tracking should be tight (tracking-tight) for large sizes."
+      },
+      "body": {
+        "family": "JetBrains Mono, monospace",
+        "weights": ["400", "500"],
+        "usage": "Use for metadata, timestamps, emotion tags, and data visualization labels. Enhances the 'Engine/Tech' aspect."
+      }
+    },
+    "scales": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none",
+      "h2": "text-3xl sm:text-4xl tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl leading-snug",
+      "body": "text-sm sm:text-base leading-relaxed tracking-tight",
+      "metadata": "text-xs tracking-[0.2em] uppercase"
+    }
+  },
+  "colors": {
+    "background": {
+      "void": "#030712",
+      "midnight": "#050B14",
+      "slate_deep": "#0F172A",
+      "glass_surface": "rgba(0, 0, 0, 0.4)"
+    },
+    "text": {
+      "primary": "#F8FAFC",
+      "secondary": "#94A3B8",
+      "muted": "#475569"
+    },
+    "borders": {
+      "subtle": "rgba(255, 255, 255, 0.1)",
+      "active": "rgba(255, 255, 255, 0.3)"
+    },
+    "accents": {
+      "ethereal_gold": "#D4AF37",
+      "pearl": "#E2E8F0"
+    },
+    "emotions": {
+      "happy": {"color": "#F59E0B", "tailwind": "text-amber-500 bg-amber-500/10"},
+      "sad": {"color": "#3B82F6", "tailwind": "text-blue-500 bg-blue-500/10"},
+      "fear": {"color": "#CBD5E1", "tailwind": "text-slate-300 bg-slate-300/10"},
+      "anger": {"color": "#EF4444", "tailwind": "text-red-500 bg-red-500/10"},
+      "neutral": {"color": "#9CA3AF", "tailwind": "text-gray-400 bg-gray-400/10"}
+    }
+  },
+  "layout_and_spacing": {
+    "grid_system": "The 'Control Room' Grid",
+    "spacing_scale": "p-1, p-2, p-4, p-6, p-8, p-12, p-16, p-24, p-32",
+    "rules": [
+      "Generous internal padding: Containers with borders must have p-6 or p-8 to prevent text collision.",
+      "Dashboard bento layout must use tight gap-4 or gap-6, maximizing space for data visualization.",
+      "Marketing/landing sections must use asymmetric 'Tetris' bento layouts with wide gap-8 to gap-12.",
+      "Optical Alignment over mechanical: Offset inner elements if it improves visual balance."
+    ]
+  },
+  "surfaces_and_textures": {
+    "glassmorphism": {
+      "usage": "Sticky headers, floating navs, modal overlays.",
+      "classes": "bg-black/40 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-saturate-150"
+    },
+    "tracing_beam": {
+      "usage": "High-conversion elements, featured memories.",
+      "classes": "relative overflow-hidden group hover:border-white/30 transition-colors duration-500"
+    },
+    "texture": {
+      "usage": "Global background for cinematic feel.",
+      "implementation": "Apply a fixed pseudo-element with a repeating noise/film grain SVG pattern, opacity 0.05, pointer-events-none."
+    }
+  },
+  "components_and_interactions": {
+    "libraries_required": [
+      "lucide-react (Icons)",
+      "recharts (Emotion graphs/timelines)",
+      "framer-motion (Smooth transitions, list staggering)",
+      "react-force-graph-3d (3D Memory Clusters/Brain Map)"
+    ],
+    "buttons": "Flat solid background or glassmorphism. Subtle scale down on active: active:scale-95. Text color explicitly defined on hover.",
+    "inputs": "Shadcn highly customized. bg-black/50 border-white/10 text-white focus:ring-1 focus:ring-ethereal_gold focus:border-ethereal_gold.",
+    "modals": "Use glassmorphism with heavy blur (backdrop-blur-3xl). Deep slate backgrounds.",
+    "hover_states": "Always transition explicitly: hover:bg-white/5 hover:text-white transition-all duration-300.",
+    "testing": "All interactive elements MUST include data-testid (e.g., data-testid='memory-capture-btn')."
+  },
+  "media_and_assets": {
+    "images": [
+      {
+        "category": "user_avatar_1",
+        "description": "Cinematic dark portrait of a woman looking up.",
+        "url": "https://images.unsplash.com/photo-1607346774265-5be74318fc90?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxwb3J0cmFpdCUyMHBlcnNvbiUyMGNpbmVtYXRpYyUyMGRhcmt8ZW58MHx8fHwxNzc1OTc3OTg4fDA&ixlib=rb-4.1.0&q=85",
+        "usage": "User profile avatar."
+      },
+      {
+        "category": "user_avatar_2",
+        "description": "Cinematic dark portrait of a man in suit.",
+        "url": "https://images.unsplash.com/photo-1670320897239-971ca7faac6d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHBlcnNvbiUyMGNpbmVtYXRpYyUyMGRhcmt8ZW58MHx8fHwxNzc1OTc3OTg4fDA&ixlib=rb-4.1.0&q=85",
+        "usage": "Shared memory author or alternative avatar."
+      }
+    ]
+  },
+  "specific_page_instructions": {
+    "dashboard_memory_map": "Use react-force-graph-3d for the memory clusters. Nodes must map to emotion colors. Background must be transparent to let the app background show through. Use ethereal_gold for linking lines.",
+    "story_mode": "Maximize reading immersion. Use Cormorant Garamond heavily. Limit width to max-w-2xl. Use leading-loose. Overlay soft vignette/shadow on the edges.",
+    "timeline_view": "Vertical line in muted slate. Memory nodes should be offset asymmetrically. High contrast between date (Mono font) and narrative (Serif font).",
+    "emotion_graphs": "Use recharts. Hide axis lines for a cleaner look. Use smooth curve lines (type='monotone'). Add area gradients below the lines mapping to the emotion color."
+  }
+}
+
